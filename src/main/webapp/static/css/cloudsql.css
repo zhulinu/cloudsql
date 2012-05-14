@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+/* 
+	@名称: cloudsql
+	@功能: 设置web sql的样式文件
+	文件的id和class 均已 cs-开头 cloud sql
+*/
+
+#cs-wrapper {
+margin: 0 auto;
+width: 900px;
+position: relative;
+}
+
+#cs-header {
+height: 80px;
+background:#ECE9D8; 
+}
+
+#cs-header-title-bar{
+	height: 14px;
+    color: #ffffff;
+    text-align: left;
+    border: 0px;
+    background-color: #ece9d8;
+    padding: 4px 10px;
+    background-image: url(../images/login-background.gif);
+}
+
+#cs-header-tools-bar{
+	float:left;
+	width:500px;
+	height: 60px;
+	//border:red solid thin;
+}
+
+#cs-header-help-bar{
+	float:left;
+	width:300px;
+	height: 60px;
+	//border:red solid thin;
+}
+
+#cs-content-wrapper{
+	width: 900px;
+	height: 500px;
+}
+
+#cs-splitter-left{
+	float:left;
+	width: 200px;
+	height: 500px;
+	background:#ECE9D8;;
+}
+
+#cs-splitter-right{
+	float:right; 
+	width: 695px;
+	height: 500px;
+	//background:#ECE9D8;;
+}
+
+#cs-footer {
+height: 25px;
+background:#ECE9D8;;
+}
+
+/* root element for nav tabs  */
+ul.cs-nav-tabs {
+    margin:0 !important;
+    padding:0;
+    height:30px;
+    border-bottom:1px solid #666;
+    width: 200px;
+}
+
+/* single tab */
+ul.cs-nav-tabs li {
+    float:left;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+
+}
+
+/* link inside the tab. uses a background image */
+ul.cs-nav-tabs a {
+    float:left;
+    padding:0;
+    margin:-10;
+    font-size:13px;
+    display:block;
+    padding:5px 15px;
+    text-decoration:none;
+    border:1px solid #666;
+    border-bottom:0px;
+    height:18px;
+    background-color:#efefef;
+    color:#777;
+    margin-right:2px;
+    position:relative;
+    top:1px;
+    outline:0;
+    -moz-border-radius:4px 4px 0 0;
+    width: 30px;
+}
+
+ul.cs-nav-tabs a:hover {
+    background-color:#F7F7F7;
+    color:#333;
+}
+
+/* selected tab */
+ul.cs-nav-tabs a.current {
+    background-color:#ddd;
+    border-bottom:1px solid #ddd;
+    color:#000;
+    cursor:default;
+}
+
+.cs-nav-panes {
+    margin:0 !important;
+    padding:0;
+
+}
+
+/* tab pane */
+.cs-nav-panes>div {
+    margin:0 !important;
+    padding:0;
+	display:none;
+    border:0px solid #666;
+    border-width:0;
+    min-height:150px;
+    background-color:#ddd;
+    height:500px;
+}
+
+/**/
+#cs-query-panel{
+	//border:red solid thin;
+	height: 240px;
+}
+#cs-sql-tabs{
+	border:yellow solid thin;
+	height: 40px;
+}
+
+#cs-sql-editor{
+	border:yellow solid thin;
+	height: 240px;
+}
+
+#cs-sql-result{
+	border:red solid thin;
+	//设置滚动条
+	PADDING-RIGHT: 10px; 
+    OVERFLOW-Y: auto; 
+    PADDING-LEFT: 10px;
+    FONT-SIZE: 11pt; PADDING-BOTTOM: 0px; 
+    OVERFLOW: auto; 
+    COLOR: blue; 
+    LINE-HEIGHT: 100%; 
+    PADDING-TOP: 0px; 
+    FONT-FAMILY: 宋体; 
+    LETTER-SPACING: 1pt; 
+    HEIGHT: 257px; 
+    TEXT-ALIGN: left; 
+    background-repeat: no-repeat;
+    background:#ECE9D8
+}
+
+#cs-header-tools-bar div {
+		float:left;
+		cursor:pointer;
+}
+
+#cs-header-tools-bar button {
+	cursor:pointer;
+	width: 50px;
+	height: 50px;
+}
+#cs-tools-login{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -450px -235px;
+}
+#cs-tools-execute{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -250px -320px;
+}
+#cs-tools-open{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -48px -155px;
+}
+
+#cs-tools-save{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -48px -238px;	
+}
+
+#cs-tools-saveas{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -117px -155px;	
+}
+
+#cs-tools-cut{
+	background: url(../images/toolbaricon.jpg) ;
+	background-position: -178px -155px;	
+}
+
+/*splitter tabs begin */
+/* tab pane */
+#accordion{
+    margin:0 !important;
+    padding:0;
+    border:0px solid #333;
+    -background:#666;
+    FONT-SIZE: 11pt; 
+    PADDING-BOTTOM: 0px; 
+    OVERFLOW: auto; 
+    COLOR: blue; 
+    LINE-HEIGHT: 100%; 
+    PADDING-TOP: 0px; 
+    FONT-FAMILY: 宋体; 
+    LETTER-SPACING: 1pt; 
+    HEIGHT: 478px; 
+    width: 200px;
+    TEXT-ALIGN: left; 
+    background-repeat: no-repeat;
+}
+
+/* accordion header */
+#accordion h2 {
+    line-height: 14px;
+    margin:0;
+    padding:5px 15px;
+    font-size:14px;
+    font-weight:normal;
+    border:1px solid #fff;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
+}
+
+#accordion  div{
+    border:yellow solid thin;
+}
+
+#accordion  div p{
+    line-height: 14px;
+    margin:0;
+    padding:5px 15px;
+    font-size:14px;
+    font-weight:normal;
+    border:1px solid #fff;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
+}
+/*splitter tabs end */
+
+
+.ui-icon {
+padding-right: 0.8em;
+font-weight: bold;
+float: left;
+margin: 0.2em 0.2em 0 0;
+cursor: pointer;
+}
+.ui-state-active {
+  background-color: #fff;
+  /* border-color: #f0713a; */
+  color: #2e2e2e;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th, .table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+.table th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+.table td {
+  vertical-align: top;
+}
+.table thead:first-child tr th, .table thead:first-child tr td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+.table-condensed th, .table-condensed td {
+  padding: 4px 5px;
+}
+.table-bordered {
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.table-bordered th + th,
+.table-bordered td + td,
+.table-bordered th + td,
+.table-bordered td + th {
+  border-left: 1px solid #ddd;
+}
+.table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+table .span1 {
+  float: none;
+  width: 44px;
+  margin-left: 0;
+}
+table .span2 {
+  float: none;
+  width: 124px;
+  margin-left: 0;
+}
+table .span3 {
+  float: none;
+  width: 204px;
+  margin-left: 0;
+}
+table .span4 {
+  float: none;
+  width: 284px;
+  margin-left: 0;
+}
+table .span5 {
+  float: none;
+  width: 364px;
+  margin-left: 0;
+}
+table .span6 {
+  float: none;
+  width: 444px;
+  margin-left: 0;
+}
+table .span7 {
+  float: none;
+  width: 524px;
+  margin-left: 0;
+}
+table .span8 {
+  float: none;
+  width: 604px;
+  margin-left: 0;
+}
+table .span9 {
+  float: none;
+  width: 684px;
+  margin-left: 0;
+}
+table .span10 {
+  float: none;
+  width: 764px;
+  margin-left: 0;
+}
+table .span11 {
+  float: none;
+  width: 844px;
+  margin-left: 0;
+}
+table .span12 {
+  float: none;
+  width: 924px;
+  margin-left: 0;
+}
+
+ [class^="icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: text-top;
+  background-image: url(../images/glyphicons-halflings.png);
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+
+.icon-ok {
+  background-position: -288px 0;
+}
+.alert-success, .alert-success .alert-heading {
+  color: #468847;
+}
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
