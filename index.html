@@ -1,39 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Cloudsql by zhulinu</title>
+<head>
+<title>cloudsql - cloud sql</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+<meta name="generator" content="cloudsom 0.0.1" /> 
+<meta name="description" content="Cloudsql - Cloud Database Manager and SQL Client" />
+<meta name="keywords" content="cloud sql database manager database client mysql postgresql ms sql db2 oracle sybase jbase derby odbc jdbc firebird h2 sqllite free freeware entity diagram browser" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="include/style.css" type="text/css" media="screen" />
+<script type='text/javascript' src='include/js/jquery.js'></script>
+<script type='text/javascript' src='include/js/external-tracking.min.js'></script>
+<style type="text/css">
+#main_header a#headertitlelink, #main_header a#headerdesclink  {
+    color:#203045;
+}
+#main_header a:hover#headertoplink {text-decoration:underline; color:#203045; }
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Cloudsql</h1>
-<p>cloud sql</p>
-        <p class="view"><a href="https://github.com/zhulinu/cloudsql">View the Project on GitHub <small>zhulinu/cloudsql</small></a></p>
-        <ul>
-          <li><a href="https://github.com/zhulinu/cloudsql/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/zhulinu/cloudsql/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/zhulinu/cloudsql">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>cloudsql's Homepage</p>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/zhulinu">zhulinu</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-  </body>
+.wp-polls, .wp-polls-form {
+	 background-color: #CEDDEB; 
+}
+</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.2: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-18127436-1']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+	<!-- Page menu code -->
+	<script type='text/javascript'> 
+	jQuery(document).ready(function() { 
+	jQuery("#dropmenu ul").css({display: "none"}); // Opera Fix 
+	jQuery("#dropmenu li").hover(function(){ 
+			jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268); 
+			},function(){ 
+			jQuery(this).find('ul:first').css({visibility: "hidden"}); 
+			}); 
+	}); 
+	</script> 
+	<!-- End Page menu Code -->
+</head>
+<body>
+<div id="main_header">
+	<div id="header_center">
+		<div id="textlinks" style="">
+			<div style="float:left; padding: 15px;"></div>
+			<div style="float:right">
+			<h1><a id="headertitlelink" href="#/">CloudSQL</a></h1>
+			<h2><a id="headerdesclink" href="#/">Cloud Database Manager and SQL Client</a></h2>
+			</div>
+		</div>
+		<div id="header_wrapper" style="position:absolute;"><a href="/"></a></div>
+	</div>
+</div>
+<div id="main_center">
+<div id="left_col">
+	<!-- Header -->
+	<div id="main_topmenu">
+		<ul id="dropmenu"> 
+		<li class="page_item"><a href="#"  id="homelink" title="Home" >Home</a></li>	
+		<li class="page_item"><a href="#/docs/">Documentation</a></li>
+		<li class="page_item"><a href="#/screenshots/">Screenshots</a></li>
+		<li class="page_item"><a href="#/download/">Download</a></li>
+		<li class="page_item"><a href="#/index.php">Support</a></li>
+		<li class="page_item"><a href="#/about/">About</a></li>
+		</ul> 
+	</div><!-- End main_topmenu -->
+	
+	<!-- posts -->
+	<div id="posts_contain">
+			<div class="post-1 post type-post status-publish format-standard hentry category-uncategorized" id="post-1">
+				<div class="post_header">
+					<div class="post_header_header"></div>
+					<div class="post_header_contain">
+						<h2>CloudSQL 0.1</h2>
+					<div class="post_info">
+						<small>2012.05.14</small>
+					</div>
+					</div>
+				</div><!-- End post_header -->
+			
+				<div class="post_content">
+<p>这是一个运行在web上的数据库操作工具。</p>
+<p>目前完成了0.1版本，这是一个不稳定版本，只是实现了一个最基本的demo。</p>
+<p>目前只支持oracle数据库，其他数据库还没有考虑开发。</p>
+<p></p>
+<p>主要的特性有：</p>
+<p>1、获取数据库的所有帐号。</p>
+<p>2、选择帐号获取帐号下的所有表和视图。</p>
+<p>3、点击表和视图，在编辑区域自动填写：select * from 表或者视图；</p>
+<p>4、在编辑区域内按F8或者点击工具栏上的执行按钮，可以对编辑区域的sql语句执行。当多条sql语句的时候可以由鼠标来选择要执行哪条语句。</p>
+<p>5、在输出区域显示执行结果。</p>
+<p></p>
+<p>支持常用的sql，对select语句没有做优化，如果select内容太多有可能会死掉，要注意。</p>
+<p>在多用户中可能会有问题，目前只有一个连接，后面会增加连接池的操作。</p>
+<p></p>
+<p>注意：</p>
+<p>oracle的jdbc jar包，由于不是开源的，所以没有在mvn中添加，在开发当中，直接通过eclipse工具导入到工程中就可以了。</p>
+				</div> <!-- end post_content -->
+
+				<div class="post_footer">
+				</div><!-- end post_footer -->
+			</div> <!-- end class entry -->
+			<div class="navigation">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+	</div><!-- end posts_contain -->
+</div><!-- end left_col -->
+
+<div id="right_col">
+		<ul>
+			<ul class="sidebar"><div class="widgetcontent"> 
+				<div id="polls-2" class="wp-polls">
+		<p style="text-align: left;"><strong>developer databases</strong></p>
+		<ul class="wp-polls-ul">
+		<li><label for="poll-answer-6">Oracle</label></li>
+		</ul>
+				</div>
+			</ul>
+			<ul class="sidebar">
+				<div class="widgetcontent"> 
+				<div id="polls-3" class="wp-polls">
+		<p style="text-align: left;"><strong>Quick Links</strong></p>
+		<div id="polls-3-ans" class="wp-polls-ans"><ul class="wp-polls-ul">
+		<li><label for="poll-answer-17">Source</label></li>
+		</ul></div>
+				</div>
+				</div>
+			</ul>
+		</ul>
+		<div id="right_footer"></div>	
+</div><!-- end right_col -->
+
+ <!-- end main_center -->
+<div id="page_footer">
+	<a href="#link">Link1</a>
+	<a href="#link">Link2</a>
+</div>
+</div>
+</body>
 </html>
+
