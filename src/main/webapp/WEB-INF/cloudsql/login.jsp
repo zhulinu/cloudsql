@@ -33,23 +33,23 @@
             </tr>
             <tr class="login">
                 <td class="login">Database IP:</td>
-                <td class="login"><input type="text" name="dbip" value="192.168.17.129"></td>
+                <td class="login"><input type="text" name="dbip"></td>
             </tr>
             <tr class="login">
                 <td class="login">Database Port:</td>
-                <td class="login"><input type="text" name="dbport"  value="1521"></td>
+                <td class="login"><input type="text" name="dbport"></td>
             </tr>
 			<tr class="login">
                 <td class="login">Database SID:</td>
-                <td class="login"><input type="text" name="dbsid"  value="XE"></td>
+                <td class="login"><input type="text" name="dbsid"></td>
             </tr>
             <tr class="login">
                 <td class="login">User Name:</td>
-                <td class="login"><input type="text" name="user" value="bwdasic"></td>
+                <td class="login"><input type="text" name="user"></td>
             </tr>
             <tr class="login">
                 <td class="login">Password:</td>
-                <td class="login"><input type="password" name="password" value="bwdasic"></td>
+                <td class="login"><input type="password" name="password"></td>
             </tr>
             <tr class="login">
                 <td class="login"></td>
