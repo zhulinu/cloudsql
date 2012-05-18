@@ -23,21 +23,27 @@ background:#ECE9D8;
     text-align: left;
     border: 0px;
     background-color: #ece9d8;
-    padding: 4px 10px;
+    padding: 0px 10px;
     background-image: url(../images/login-background.gif);
+}
+
+#cs-header-title-bar p{
+	border-width:	0;
+	padding:		0;
+	margin:0;
 }
 
 #cs-header-tools-bar{
 	float:left;
 	width:500px;
-	height: 60px;
+	height: 50px;
 	//border:red solid thin;
 }
 
 #cs-header-help-bar{
 	float:left;
 	width:300px;
-	height: 60px;
+	height: 50px;
 	//border:red solid thin;
 }
 
@@ -146,13 +152,7 @@ ul.cs-nav-tabs a.current {
 	height: 40px;
 }
 
-#cs-sql-editor{
-	border:yellow solid thin;
-	height: 240px;
-}
-
 #cs-sql-result{
-	border:red solid thin;
 	//设置滚动条
 	PADDING-RIGHT: 10px; 
     OVERFLOW-Y: auto; 
@@ -164,10 +164,9 @@ ul.cs-nav-tabs a.current {
     PADDING-TOP: 0px; 
     FONT-FAMILY: 宋体; 
     LETTER-SPACING: 1pt; 
-    HEIGHT: 257px; 
+    HEIGHT: 350px; 
     TEXT-ALIGN: left; 
     background-repeat: no-repeat;
-    background:#ECE9D8
 }
 
 #cs-header-tools-bar div {

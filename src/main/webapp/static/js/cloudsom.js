@@ -56,10 +56,11 @@ CloudSOM.CloudSql.QueryModel = Backbone.Model.extend({
 CloudSOM.CloudSql.ButtonView = Backbone.View.extend({
   el:$("#cs-header-tools-bar"),
   events: {
-	"click #cs-tools-login"      : "login",
     "click #cs-tools-execute"    : "execute"
   },
-  login:function(){},
+  login:function(){
+	 
+  },
   execute:function(){
 	    var thisView = window.queryView; // kludge to handle the context limitations on CodeMirror change events
 	    var querySql = thisView.editor.getSelection();
@@ -84,7 +85,7 @@ CloudSOM.CloudSql.ButtonView = Backbone.View.extend({
 
 //
 CloudSOM.CloudSql.ObjectView = Backbone.View.extend({
-  el:$("#cs-splitter-left"),
+  el:$("#cs-left-pane"),
   events: {
     "change #tabUserCbx" : "changeUsers",
     "click #cs-all-table": "changeTable",
@@ -107,7 +108,10 @@ CloudSOM.CloudSql.ObjectView = Backbone.View.extend({
 	  window.queryView.editor.setValue('select * from '+$(e.target).text()+';');
   },
   initialize:function(){
-	  $('#tabUserCbx').load('/cloudsql/query/sqlusers.html');
+	  var length = $('#cs-header-title-bar p').text().length;
+	  if ( length > 20 ){
+		  $('#tabUserCbx').load('/cloudsql/query/sqlusers.html');
+	  }
   }
 });
 
