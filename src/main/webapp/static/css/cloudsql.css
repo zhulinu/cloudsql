@@ -164,7 +164,7 @@ ul.cs-nav-tabs a.current {
     PADDING-TOP: 0px; 
     FONT-FAMILY: 宋体; 
     LETTER-SPACING: 1pt; 
-    HEIGHT: 350px; 
+    HEIGHT: 300px; 
     TEXT-ALIGN: left; 
     background-repeat: no-repeat;
 }
@@ -209,7 +209,7 @@ ul.cs-nav-tabs a.current {
 
 /*splitter tabs begin */
 /* tab pane */
-#accordion{
+#cs-left-pane-detail{
     margin:0 !important;
     padding:0;
     border:0px solid #333;
@@ -223,13 +223,13 @@ ul.cs-nav-tabs a.current {
     FONT-FAMILY: 宋体; 
     LETTER-SPACING: 1pt; 
     HEIGHT: 478px; 
-    width: 200px;
+    width: 180px;
     TEXT-ALIGN: left; 
     background-repeat: no-repeat;
 }
 
-/* accordion header */
-#accordion h2 {
+/* cs-left-pane-detail header */
+#cs-left-pane-detail h2 {
     line-height: 14px;
     margin:0;
     padding:5px 15px;
@@ -240,11 +240,11 @@ ul.cs-nav-tabs a.current {
     cursor:pointer;
 }
 
-#accordion  div{
+#cs-left-pane-detail  div{
     border:yellow solid thin;
 }
 
-#accordion  div p{
+#cs-left-pane-detail  div p{
     line-height: 14px;
     margin:0;
     padding:5px 15px;

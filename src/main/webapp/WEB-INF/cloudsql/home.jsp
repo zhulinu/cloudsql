@@ -21,8 +21,8 @@
 	#tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
 	#add_tab { cursor: pointer; }
 	
-	#tabs{height:100%;margin:0;padding:0;border:0;}
-	#tabs-1{height:540px;margin:0;padding:0;border:0;}
+	#tabs{height:300px;margin:0;padding:0;border:0;}
+	#tabs-1{height:200px;margin:0;padding:0;border:0;}
 	
 	//------------layout
 	.container {
@@ -105,6 +105,7 @@
 			south__closable       : false ,
 		    south__resizable      : false ,
 			north__size           :	50  ,
+			south__size           :	30  ,
 			west__size            : 220 ,
 			west__minSize         :	220 ,
 			west__maxSize         :	500 ,
@@ -113,27 +114,36 @@
 			south__spacing_open   :	0   ,
 			spacing_open          :	8   ,
 		    spacing_closed        :	10  ,
-			center__onresize:		"innerLayout.resizeAll"
+			center__onresize      : "innerLayout.resizeAll",
+			center__onresize_end  :function () {$("#tabs-1").height(document.body.clientHeight-131);
+												 $("#cs-left-pane-detail").height(document.body.clientHeight-122);
+												 $("#cs-left-pane-detail").width($(".out-west").width()-17);}
 		},
 		innerLayout = null,
 	    innerLayoutOptions = {
-			center__paneSelector:	".inner-center"
-		,	south__paneSelector:	".inner-south"
-		,	spacing_open:			8 // ALL panes 
-		,	spacing_closed:			10 
-		,	south__size:			"70%"
-		,	south__minSize:			80 
-		,	south__maxSize:			"80%" 
-		,	south__closable:		false
+			center__paneSelector:	".inner-center" ,
+			south__paneSelector:	".inner-south"  ,
+			spacing_open:			8  ,// ALL panes  ,
+			spacing_closed:			10 ,
+			south__size:			"70%" ,
+			south__minSize:			80    ,
+			south__maxSize:			"80%" ,
+			south__closable:		false ,
+			south__onresize_end  :function () {$(".CodeMirror-scroll").height($("#tabs-1").height()-$(".inner-south").height()-20);
+			                                    $("#cs-sql-result").height($(".inner-south").height()-20);}
 		}; 
 //--------------layout config end--------------------
 	$(function() {
 		outerLayout = $('body').layout( outerLayoutOptions ); 
 		innerLayout = $('#tabs-1').layout( innerLayoutOptions ); 
+		//设置中心的高度，防止多个滚动条出现
+		$("#tabs-1").height(document.body.clientHeight-131);
+		$("#cs-left-pane-detail").height(document.body.clientHeight-122);
+		$("#cs-left-pane-detail").width($(".out-west").width()-17);
 	}); 
 	
 	$(function() {	
-		$('#accordion h2').click(function(){
+		$('#cs-left-pane-detail h2').click(function(){
 			$(this).next('div').toggle();
 		});
 	});
@@ -217,7 +227,7 @@
   <div id="cs-left-pane" style="display: block;">
     请选择：<select id="tabUserCbx"></select> 
 	<br />
-	<div id="accordion">
+	<div id="cs-left-pane-detail">
 	  <div id="cs-sql-tabls">
 	    <h2 id="cs-all-table">all tables</h2>
 	    <div id="sql-sql-tables-detail"></div>
@@ -250,7 +260,7 @@
 </div><!-- End demo -->
  
 </DIV>
-<DIV id="cs-footer" class="out-south container border"></DIV>
+<DIV id="cs-footer" class="out-south container border">Info</DIV>
 
 <div id="dialog" title="Login">
 	<form:form id="login" action="${ctx}/login" method="post" >

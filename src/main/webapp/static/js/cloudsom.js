@@ -90,7 +90,7 @@ CloudSOM.CloudSql.ObjectView = Backbone.View.extend({
     "change #tabUserCbx" : "changeUsers",
     "click #cs-all-table": "changeTable",
     "click #cs-all-view" : "changeView",
-    "click #accordion p" : "clickObject"
+    "click #cs-left-pane-detail p" : "clickObject"
   },
   changeUsers:function(){
 	  //alert($('#tabUserCbx').val()+$('#tabUserCbx option:selected').text());
