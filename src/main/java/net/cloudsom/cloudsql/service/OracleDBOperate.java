@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.support.rowset.SqlRowSetMetaData;
@@ -153,14 +154,34 @@ public class OracleDBOperate implements DBOprate {
 		String beanString = null;
 		List<SelectSqlJson> sqlJsons = new ArrayList<SelectSqlJson>();
 		
-		sqlResult.setColumns(querySqlRowSet(sql));
-		sqlResult.setData(querySql(sql));	
-		
-		sqlJson.setRESULTS(sqlResult);
-		sqlJson.setEXECUTIONTIME(10);
-		sqlJson.setSUCCEEDED("SUCCEEDED");
-		sqlJsons.add(sqlJson);
 		try{
+			sqlResult.setColumns(querySqlRowSet(sql));
+			sqlResult.setData(querySql(sql));	
+		
+			sqlJson.setRESULTS(sqlResult);
+			sqlJson.setEXECUTIONTIME(10);
+			sqlJson.setSUCCEEDED("SUCCEEDED");
+			sqlJsons.add(sqlJson);
+		
+			beanString = mapper.toJson(sqlJsons);
+			logger.info("Bean:" + beanString);
+		} catch( BadSqlGrammarException e){
+			List<String> sqlColumns = new ArrayList<String>();
+			List<Object> oneDate = new ArrayList<Object>();
+			List<List<Object>> allDate = new ArrayList<List<Object>>();
+			sqlColumns.clear();
+			sqlColumns.add("exec result");
+			String sqlExec = "error" + e.getMessage();
+			oneDate.add(sqlExec);
+			allDate.add(oneDate);
+			
+			sqlResult.setData(allDate);
+			sqlResult.setColumns(sqlColumns);
+			
+			sqlJson.setRESULTS(sqlResult);
+			sqlJson.setEXECUTIONTIME(10);
+			sqlJson.setSUCCEEDED("SUCCEEDED");
+			sqlJsons.add(sqlJson);
 			beanString = mapper.toJson(sqlJsons);
 			logger.info("Bean:" + beanString);
 		} catch ( Exception e ){
